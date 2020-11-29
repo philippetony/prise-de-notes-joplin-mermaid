@@ -1,42 +1,110 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PRESENTA Lib</title>
-    <link rel="stylesheet" type="text/css" href="libs/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="zenika.css">
-    <script src="libs/presenta.min.js"></script>
-    <script src="libs/presenta-module-highlightjs.min.js"></script>
-    <script src="libs/presenta-block-youtube.min.js"></script>
-    <script src="libs/presenta-controller-markdown.min.js"></script>
-    <script src="libs/presenta-controller-console-notes.min.js"></script>
-    <script src="libs/presenta-controller-swiper.min.js"></script>
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-        html,
-        body,
-        #app {
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            padding: 0;
-            margin: 0;
-            background-color: black;
-        }
-    </style>
+	<title>reveal.js</title>
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
 </head>
 
 <body>
-    <div id="app"></div>
-    <script src="config.js"></script>
-    <script>
-        new Presenta('#app', config)
-    </script>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h1><small>Libérez votre </small><br />
+					prise de notes<br />
+					<small>découvrez le combo </small><br />
+					<b>Joplin</b> <small>+</small> <b>Mermaid</b></h1>
+			</section>
+			<section data-markdown>
+				## Pourquoi *prendre des notes* ?
+				- Remplace des notes papier
+				- Notes personnelles / compte-rendu de réunion
+				- Notes en cours de développement (brouillons ?)
+				- Tips & tricks techniques (urls, méthodes)
+				- Journal de travail
+				- Mémoire "externe"
+			</section>
+			<section data-markdown>## Pourquoi prendre des notes *électroniques* (vs. sur papier) ?
+
+				### Electronique :
+				- Indexé
+				- Partageable facilement (notes lisibles facilement ;) )
+				- Images
+				- Horodatage
+				- Plus rapide
+
+				### Papier
+				- Pas de batterie
+				- Dessins / Schémas
+				- Sketchs / MindMap
+				- Facilement sécurisable
+			</section>
+			<section data-markdown>## Etat des lieux des logiciels de prise de notes
+				Les plus connus :
+				- Microsoft OneNote (Desktop Windows/MAC, Web via 365, Mobile, Payant)
+				- Evernote (Mobile, Freemium)
+				- Google Keep (Mobile, Web, Free)
+				<notes>
+					OneNote (2003, 2007, 2010, 2013, 2016, 2020), open format
+					EverNote lancé en 2000, sur mobile d'abord, web en 2008-2011
+					Google Keep (2013)
+				</notes>
+			</section>
+			<section data-markdown>
+				## Multi-device & multi-platform
+				- Packaging unifié (mono-repo) avec clients :
+				- Windows
+				- Linux
+				- (MacOs (via HomeBrew))
+				- cli (npm)
+				- Mobile :
+				- iOS
+				- Android
+			</section>
+			<section data-markdown>
+				## Synchronisation & Chiffrage
+				Synchronisation des notes avec plusieurs services cloud :
+
+			</section>
+			<section data-markdown>## Extensibilité & Under the box</section>
+			<section data-markdown>## Focus sur **MermaidJS**</section>
+			<section data-markdown># <b>Live</b> Démo</section>
+			<section data-markdown>## Les Plus
+				* Open-source
+				* Synchronisation multi-device
+				* Multi-plateforme (Windows, macOS, Linux, Mobile, npm)</section>
+			<section data-markdown>## Les Moins
+				* Pas de synchronisation Google Drive
+				* Pas d'autocomplétion sur les plugins
+				* </section>
+			<section># Questions ?</section>
+		</div>
+	</div>
+
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
+
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
 </body>
 
 </html>

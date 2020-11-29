@@ -1,7 +1,10 @@
-# Présentation sur la prise de notes, l'utilsation d'outils libres, Joplin et son extension Mermaid
+# Libérez votre Prise de Notes avec Joplin + Mermaid 
+ Présentation sur la prise de notes, l'utilsation d'outils libres, Joplin et son extension Mermaid
 
-## Licence
+# Relealjs
 
-**PRESENTA Lib** is released under the [3-Clause BSD license](LICENSE).
+Cette présentation est réalisée avec revealjs
 
-Copyright © 2020 Fabio Franchino, [https://fabiofranchino.com](https://fabiofranchino.com)
+## License
+
+CC BY-SA
