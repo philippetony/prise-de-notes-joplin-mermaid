@@ -3,13 +3,15 @@
 
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=2.0, user-scalable=yes">
 
-	<title>reveal.js</title>
+	<title>Libérez votre prise de notes - Découvrez Joplin + MermaidJS</title>
 
+	<link rel="stylesheet" href="index.css">
 	<link rel="stylesheet" href="dist/reset.css">
 	<link rel="stylesheet" href="dist/reveal.css">
 	<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+	<link rel="stylesheet" href="node_modules/tailwindcss/dist/tailwind.min.css" />
 
 	<!-- Theme used for syntax highlighted code -->
 	<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
@@ -24,69 +26,198 @@
 					<small>découvrez le combo </small><br />
 					<b>Joplin</b> <small>+</small> <b>Mermaid</b></h1>
 			</section>
-			<section data-markdown>
-				## Pourquoi *prendre des notes* ?
-				- Remplace des notes papier
-				- Notes personnelles / compte-rendu de réunion
-				- Notes en cours de développement (brouillons ?)
-				- Tips & tricks techniques (urls, méthodes)
-				- Journal de travail
-				- Mémoire "externe"
+			<section>
+				<h2>Pourquoi <strong>prendre des notes</strong>&nbsp;?</h2>
+				<ul>
+					<!--<li class="fragment">Remplace des notes papier</li>-->
+					<li class="fragment">Se rappeler</li>
+					<li class="fragment">Favoriser l'apprentissage (Mémoire "externe")</li>
+					<li class="fragment">Garder une trace</li>
+				</ul>
+				<p class="p-1"></p>
+				<h2 class="fragment">Que note-t-on ?</h2>
+				<ul>
+					<li class="fragment">Détails techniques (urls, n° télétphone, méthodes)</li>
+					<li class="fragment">Schémas, dessins, diagrammes</li>
+					<li class="fragment">Notes de réunion / entretien</li>
+					<li class="fragment">Journal de travail</li>
+				</ul>
 			</section>
-			<section data-markdown>## Pourquoi prendre des notes *électroniques* (vs. sur papier) ?
-
-				### Electronique :
-				- Indexé
-				- Partageable facilement (notes lisibles facilement ;) )
-				- Images
-				- Horodatage
-				- Plus rapide
-
-				### Papier
-				- Pas de batterie
-				- Dessins / Schémas
-				- Sketchs / MindMap
-				- Facilement sécurisable
+			<section>
+				<h2>Papier ou électronique ?</h2>
+				<div class="flex justify-between">
+					<div>
+						<h3>Papier</h3>
+						<ul>
+							<div class="fragment flex"><span class="w-16">🖊️</span> Intuitif</div>
+							<div class="fragment flex"><span class="w-16">🔋</span> Pas de batterie</div>
+							<div class="fragment flex"><span class="w-16">🎨</span> Dessins / Schémas</div>
+							<div class="fragment flex"><span class="w-16">📊</span> Sketchs / MindMap </div>
+							<div class="fragment flex"><span class="w-16">🔒</span> Facilement sécurisable </div>
+						</ul>
+					</div>
+					<div class="m-2 border-r-4 border-gray-500 border-dotted"></div>
+					<div>
+						<h3>Electronique</h3>
+						<ul>
+							<div class="fragment flex"><span class="w-16">⏲️</span> Plus rapide</div>
+							<div class="fragment flex"><span class="w-16">🗚</span> Lisibilité</div>
+							<div class="fragment flex"><span class="w-16">✉️</span> Partagé facilement</div>
+							<div class="fragment flex"><span class="w-16">🖼️</span> Images</div>
+							<div class="fragment flex"><span class="w-16">🔎</span> Indexé</div>
+							<div class="fragment flex"><span class="w-16">🕑</span> Horodatage</div>
+							<div class="fragment flex"><span class="w-16">⌨️</span> Vitesse de saisie</div>
+						</ul>
+					</div>
+				</div>
 			</section>
-			<section data-markdown>## Etat des lieux des logiciels de prise de notes
-				Les plus connus :
-				- Microsoft OneNote (Desktop Windows/MAC, Web via 365, Mobile, Payant)
-				- Evernote (Mobile, Freemium)
-				- Google Keep (Mobile, Web, Free)
-				<notes>
+			<section data-auto-animate>
+				<h2>Solution existantes</h2>
+				<p>Les plus connus</p>
+				<div class="flex flex-row justify-around">
+					<div class="flex flex-col items-center">
+						<img class="object-contain h-32 w-32" src="onenote.png" />
+						<div class="fragment" data-fragment-index="1">Microsoft OneNote</div>
+						<div class="fragment text-sm" data-fragment-index="1">(Desktop Windows/MAC, Web via 365, Mobile,
+							Payant)</div>
+					</div>
+					<div class="flex flex-col items-center">
+						<img class="object-contain h-32 w-32" src="evernote.jfif" />
+						<div class="fragment" data-fragment-index="2">Evernote</div>
+						<div class="fragment text-sm" data-fragment-index="2">(Mobile, Freemium)</div>
+					</div>
+					<div class="flex flex-col items-center">
+						<img class="object-contain h-32 w-32" src="google_keep.jfif" />
+						<div class="fragment" data-fragment-index="3">Google Keep </div>
+						<div class="fragment text-sm" data-fragment-index="3">(Mobile, Web, Free)</div>
+					</div>
+				</div>
+				<div class="fragment">
+					<p>Et côté open-source ?</p>
+					<div class="fragment flex flex-row justify-around">
+						<div class="fragment flex flex-col items-center">
+							<img class="object-contain h-32 w-32" src="simplenote.png" />
+							<div>SimpleNote</div>
+						</div>
+						<div class="fragment flex flex-col items-center">
+							<img class="object-contain h-32 w-32" src="laverna.png" />
+							<div>Laverna</div>
+						</div>
+						<div class="fragment flex flex-col items-center">
+							<img class="object-contain h-32 w-32" src="turtl.svg" />
+							<div>Turtl</div>
+						</div>
+						<div class="fragment flex flex-col items-center">
+							<img class="object-contain h-32 w-32" src="joplin.svg" />
+							<div data-id="joplin">Joplin</div>
+						</div>
+						<div class="fragment flex flex-col items-center justify-center">
+							...
+						</div>
+					</div>
+					<p><em>Difficile d'avoir une vue d'ensemble.</em></p>
+				</div>
+				<aside class="notes">
 					OneNote (2003, 2007, 2010, 2013, 2016, 2020), open format
 					EverNote lancé en 2000, sur mobile d'abord, web en 2008-2011
 					Google Keep (2013)
-				</notes>
+					SimpleNote => Interface épurée
+					Laverna => JS only
+					Turtl => Ressemble à Keep (vue matricielle)
+				</aside>
 			</section>
-			<section data-markdown>
-				## Multi-device & multi-platform
-				- Packaging unifié (mono-repo) avec clients :
-				- Windows
-				- Linux
-				- (MacOs (via HomeBrew))
-				- cli (npm)
-				- Mobile :
-				- iOS
-				- Android
+			<section data-auto-animate>
+				<div class="flex justify-center items-center" data-autoslide="400">
+					<img class="object-contain h-32 w-32" src="joplin.svg" />
+					<div class="p-4" data-id="joplin">Joplin</div>
+				</div>
+				<div class="flex">
+					<img src="joplin_main.png"
+						style="object-fit: cover; width: 300px !important; height: 500px; object-position: 0 0;" />
+					<img src="joplin_main.png"
+						style="object-fit: cover; width: 623px !important; height: 500px; object-position: 100% 0;" />
+				</div>
 			</section>
-			<section data-markdown>
-				## Synchronisation & Chiffrage
+			<section data-auto-animate>
+				<div class="flex">
+					<img data-id="books" src="joplin_main.png"
+						style="object-fit: cover; width: 300px !important; height: 500px; object-position: 0 0;" />
+					<ul>
+						<li>Organisation en carnets</li>
+						<li>Notes et Tâches</li>
+						<li>Labels</li>
+					</ul>
+				</div>
+			</section>
+			<section data-auto-animate>
+				<div class="flex">
+					<img data-id="books" src="joplin_main.png"
+						style="object-fit: cover; width: 300px !important; height: 500px; object-position: 0 0;" />
+					<img data-id="editor" src="joplin_main.png"
+						style="object-fit: cover; width: 623px !important; height: 500px; object-position: 100% 0;" />
+				</div>
+			</section>
+			<section data-auto-animate>
+				<div class="flex">
+					<ul>
+						<li>Editeur Markdown</li>
+						<li>Mode WYSIWYG (beta)</li>
+						<li>Plugins markdown</li>
+					</ul>
+					<img data-id="editor" src="joplin_main.png"
+						style="object-fit: cover; width: 623px !important; height: 500px; object-position: 100% 0;" />
+
+				</div>
+			</section>
+			<section>
+				<h2>Multi-device & multi-platform</h2>
+				<ul>
+					<li class="fragment">Packaging unifié (mono-repo) avec clients :</li>
+					<li class="fragment">Windows</li>
+					<li class="fragment">Linux</li>
+					<li class="fragment">(MacOs (via HomeBrew))</li>
+					<li class="fragment">cli (npm)</li>
+					<li class="fragment">Mobile :</li>
+					<ul>
+						<li class="fragment">iOS</li>
+						<li class="fragment">Android</li>
+					</ul>
+				</ul>
+			</section>
+			<section>
+				<h2>Synchronisation & Chiffrage</h2>
 				Synchronisation des notes avec plusieurs services cloud :
 
 			</section>
-			<section data-markdown>## Extensibilité & Under the box</section>
-			<section data-markdown>## Focus sur **MermaidJS**</section>
-			<section data-markdown># <b>Live</b> Démo</section>
-			<section data-markdown>## Les Plus
-				* Open-source
-				* Synchronisation multi-device
-				* Multi-plateforme (Windows, macOS, Linux, Mobile, npm)</section>
-			<section data-markdown>## Les Moins
-				* Pas de synchronisation Google Drive
-				* Pas d'autocomplétion sur les plugins
-				* </section>
-			<section># Questions ?</section>
+			<section>
+				<h2>Extensibilité & Under the box
+			</section>
+			</h2>
+			<section>
+				<h2>Focus sur <strong>MermaidJS</strong>
+			</section>
+			</h2>
+			<section>
+				<h1> <b>Live</b> Démo</h1>
+			</section>
+			<section>
+				<h2>Les Plus</h2>
+				<ul>
+					<li class="fragment">Open-source</li>
+					<li class="fragment">Synchronisation multi-device</li>
+					<li class="fragment">Multi-plateforme (Windows, macOS, Linux, Mobile, npm)</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Les Moins</h2>
+				<ul>
+					<li class="fragment">Pas de synchronisation Google Drive</li>
+					<li class="fragment">Pas d'autocomplétion sur les plugins</li>
+				</ul>
+			</section>
+			<section>
+				<h1>Questions ?</h1>
+			</section>
 		</div>
 	</div>
 
@@ -96,8 +227,8 @@
 	<script src="plugin/highlight/highlight.js"></script>
 	<script>
 		// More info about initialization & config:
-		// - https://revealjs.com/initialization/
-		// - https://revealjs.com/config/
+		// <li class="fragment">https://revealjs.com/initialization/</li>
+		// <li class="fragment">https://revealjs.com/config/</li>
 		Reveal.initialize({
 			hash: true,
 

@@ -91,6 +91,7 @@
     }
   },
   "dependencies": {
-    "reveal.js": "^4.1.0"
+    "reveal.js": "^4.1.0",
+    "tailwindcss": "^2.0.1"
   }
 }
