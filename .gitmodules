@@ -1,0 +1,6 @@
+[submodule "reveal.js-mermaid-plugin"]
+	path = reveal.js-mermaid-plugin
+	url = https://github.com/ludwick/reveal.js-mermaid-plugin.git
+[submodule "qrcodejs"]
+	path = qrcodejs
+	url = https://github.com/davidshimjs/qrcodejs.git
