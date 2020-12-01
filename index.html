@@ -59,7 +59,7 @@
 				<p class="p-1"></p>
 				<h2 class="fragment">Que note-t-on ?</h2>
 				<ul>
-					<li class="fragment">Détails techniques (urls, n° télétphone, méthodes)</li>
+					<li class="fragment">Détails techniques (urls, n° téléphone, méthodes)</li>
 					<li class="fragment">Schémas, dessins, diagrammes</li>
 					<li class="fragment">Notes de réunion / entretien</li>
 					<li class="fragment">Journal de travail</li>
@@ -74,7 +74,7 @@
 							<div class="fragment flex"><span class="w-16">🖊️</span> Intuitif</div>
 							<div class="fragment flex"><span class="w-16">🔋</span> Pas de batterie</div>
 							<div class="fragment flex"><span class="w-16">🎨</span> Dessins / Schémas</div>
-							<div class="fragment flex"><span class="w-16">📊</span> Sketchs / MindMap </div>
+							<div class="fragment flex"><span class="w-16">📊</span> MindMap </div>
 							<div class="fragment flex"><span class="w-16">🔒</span> Facilement sécurisable </div>
 						</ul>
 					</div>
@@ -82,7 +82,6 @@
 					<div>
 						<h3>Électronique</h3>
 						<ul>
-							<div class="fragment flex"><span class="w-16">⏲️</span> Plus rapide</div>
 							<div class="fragment flex"><span class="w-16">🗚</span> Lisibilité</div>
 							<div class="fragment flex"><span class="w-16">✉️</span> Partagé facilement</div>
 							<div class="fragment flex"><span class="w-16">🖼️</span> Images</div>
@@ -106,7 +105,7 @@
 					<div class="flex flex-col items-center">
 						<img class="object-contain h-32 w-32" src="evernote.jfif" />
 						<div class="fragment" data-fragment-index="2">Evernote</div>
-						<div class="fragment text-sm" data-fragment-index="2">(Mobile, Freemium)</div>
+						<div class="fragment text-sm" data-fragment-index="2">(Mobile, Web, Freemium)</div>
 					</div>
 					<div class="flex flex-col items-center">
 						<img class="object-contain h-32 w-32" src="google_keep.jfif" />
@@ -455,11 +454,11 @@ graph LR
 					</span>
 					<div class="flex-auto text-4xl" data-id="code">
 						<pre><code data-trim data-noescape>                   
-graph LR
-	A[Square Rect] -- Link text --> B((Circle))
-	A --> C(Round Rect)
-	B --> D{Rhombus}
-	C --> D
+							sequenceDiagram
+								participant John
+								participant Alice
+								Alice->>John: Hello John, how are you?
+								John-->>Alice: Great!
 					</code>
 						</pre>
 					</div>
@@ -621,6 +620,7 @@ sequenceDiagram
 	<script src="plugin/markdown/markdown.js"></script>
 	<script src="plugin/highlight/highlight.js"></script>
 	<script src="reveal.js-mermaid-plugin/plugin/mermaid/mermaid.js"></script>
+	<script src="reveal.js-elapsed-time-bar/plugin/elapsed-time-bar/elapsed-time-bar.js"></script>
 
 	<script src="node_modules/mermaid/dist/mermaid.min.js"></script>
 
@@ -630,9 +630,25 @@ sequenceDiagram
 		// <li class="fragment">https://revealjs.com/config/</li>
 		Reveal.initialize({
 			hash: true,
+			allottedTime: 20 * 60 * 1000, // 20 minutes
+			barColor: 'rgb(181, 20, 49)',
+
 
 			// Learn about plugins: https://revealjs.com/plugins/
-			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+			dependencies: [
+				{ src: 'plugin/elapsed-time-bar/elapsed-time-bar.js' }
+			],
+			keyboard: {
+				// pause/resume time when Enter is pressed
+				13: () => {
+					ElapsedTimeBar.isPaused ? ElapsedTimeBar.resume() : ElapsedTimeBar.pause();
+				},
+				// reset timer when 'r' is pressed
+				82: () => {
+					ElapsedTimeBar.reset();
+				}
+			}
 		});
 		mermaid.initialize({ theme: 'dark' });
 	</script>
