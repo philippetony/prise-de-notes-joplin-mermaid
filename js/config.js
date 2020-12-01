@@ -5,8 +5,8 @@ export default {
 
 	// The "normal" size of the presentation, aspect ratio will be preserved
 	// when the presentation is scaled to fit different resolutions
-	width: 1920 * .6,
-	height: 1080 * .6,
+	width: 648 * 1680 / 1050,
+	height: 648,
 
 	// Factor of the display size that should remain empty around the content
 	margin: 0,
