@@ -11,6 +11,12 @@
 		.no-border img {
 			margin: auto !important;
 		}
+
+		/** Ugly fix for mermaid text being out of bound */
+		.diagram-display svg foreignObject {
+			transform: translate(-3%, -3%);
+			font-size: 80%;
+		}
 	</style>
 	<link rel="stylesheet" href="dist/reset.css">
 	<link rel="stylesheet" href="dist/reveal.css">
@@ -28,7 +34,8 @@
 		<div class="slides">
 			<section>
 				<div class="min-h-full min-w-full flex">
-					<div style="background-color: #b51431; height: 100%; width: 100%;" class="p-12">
+					<div style="background-color: #b51431; height: 648px; width: 100%;"
+						class="p-12 flex flex-col justify-center">
 						<h1 style="font-size: 160%;"><small>Libérez votre </small><br />
 							prise de notes<br /><br />
 							<small>découvrez le combo </small><br />
@@ -37,7 +44,7 @@
 					<div class="p-12 flex flex-col items-center justify-center">
 						<img src="znk.png" class=" w-32 h-32" />
 						<p>Technozaure 2020</p>
-
+						<p>Track 2</p>
 					</div>
 				</div>
 			</section>
@@ -58,7 +65,7 @@
 					<li class="fragment">Journal de travail</li>
 				</ul>
 			</section>
-			<section>
+			<section class="p-10">
 				<h2>Papier ou électronique ?</h2>
 				<div class="flex justify-between">
 					<div>
@@ -86,7 +93,7 @@
 					</div>
 				</div>
 			</section>
-			<section data-auto-animate style="font-size: 70%;">
+			<section data-auto-animate style="zoom: 70%;">
 				<h2>Solution existantes</h2>
 				<p>Les plus connus</p>
 				<div class="flex flex-row justify-around">
@@ -130,7 +137,7 @@
 							...
 						</div>
 					</div>
-					<p><em>Difficile d'avoir une vue d'ensemble.</em></p>
+					<p class="fragment"><em>Difficile d'avoir une vue d'ensemble.</em></p>
 				</div>
 				<aside class="notes">
 					OneNote (2003, 2007, 2010, 2013, 2016, 2020), open format
@@ -141,20 +148,24 @@
 					Turtl => Ressemble à Keep (vue matricielle)
 				</aside>
 			</section>
-			<section data-auto-animate>
+			<section data-auto-animate style="zoom: 90%;">
 				<div class="flex justify-center items-center" data-autoslide="400">
 					<img class="object-contain h-32 w-32" src="joplin.svg" />
 					<div class="p-4" data-id="joplin">Joplin</div>
 				</div>
-				<div class="flex">
+				<div class="flex justify-center">
 					<img src="joplin_main.png"
 						style="object-fit: cover; width: 300px !important; height: 500px; object-position: 0 0;" />
 					<img src="joplin_main.png"
 						style="object-fit: cover; width: 623px !important; height: 500px; object-position: 100% 0;" />
 				</div>
 			</section>
-			<section data-auto-animate>
-				<div class="flex">
+			<section data-auto-animate style="zoom: 90%;">
+				<div class="flex justify-center items-center" data-autoslide="400">
+					<img class="object-contain h-32 w-32" src="joplin.svg" />
+					<div class="p-4" data-id="joplin">Joplin</div>
+				</div>
+				<div class="flex justify-center">
 					<img data-id="books" src="joplin_main.png"
 						style="object-fit: cover; width: 300px !important; height: 500px; object-position: 0 0;" />
 					<ul>
@@ -164,16 +175,24 @@
 					</ul>
 				</div>
 			</section>
-			<section data-auto-animate>
-				<div class="flex">
+			<section data-auto-animate style="zoom: 90%;">
+				<div class="flex justify-center items-center" data-autoslide="400">
+					<img class="object-contain h-32 w-32" src="joplin.svg" />
+					<div class="p-4" data-id="joplin">Joplin</div>
+				</div>
+				<div class="flex justify-center">
 					<img data-id="books" src="joplin_main.png"
 						style="object-fit: cover; width: 300px !important; height: 500px; object-position: 0 0;" />
 					<img data-id="editor" src="joplin_main.png"
 						style="object-fit: cover; width: 623px !important; height: 500px; object-position: 100% 0;" />
 				</div>
 			</section>
-			<section data-auto-animate>
-				<div class="flex">
+			<section data-auto-animate style="zoom: 90%;">
+				<div class="flex justify-center items-center" data-autoslide="400">
+					<img class="object-contain h-32 w-32" src="joplin.svg" />
+					<div class="p-4" data-id="joplin">Joplin</div>
+				</div>
+				<div class="flex justify-center">
 					<ul>
 						<li>Editeur Markdown</li>
 						<li>Mode WYSIWYG (beta)</li>
@@ -187,41 +206,43 @@
 			<section data-auto-animate>
 				<h2>Multi-device <br />& multi-platform</h2>
 				<p>Packaging unifié (mono-repo) avec clients :</p>
-				<div class="flex flex-row justify-center">
+				<div class="flex flex-row justify-center p-10">
 					<div class="flex-auto flex flex-col m-1 fragment" data-fragment-index="1">
 
 						<div class="border-white border-2 border-solid flex rounded-lg justify-evenly flex-auto p-4">
 							<div class="fragment flex flex-col" data-fragment-index="1"><i
-									class="fab fa-windows"></i><span class="text-sm">Windows</span></div>
+									class="fab fa-windows"></i><span class="text-lg">Windows</span></div>
 							<div class="fragment flex flex-col" data-fragment-index="2"><i
-									class="fab fa-linux"></i><span class="text-sm">Linux</span></div>
+									class="fab fa-linux"></i><span class="text-lg">Linux</span></div>
 							<div class="fragment flex flex-col" data-fragment-index="6"
-								style="opacity: 0.3 !important;"><i class="fab fa-apple"></i><span class="text-sm">(via
+								style="opacity: 0.3 !important;"><i class="fab fa-apple"></i><span class="text-lg">(via
 									HomeBrew)</span></div>
 							<div class="fragment flex flex-col" data-fragment-index="3"><i class="fab fa-npm"></i><span
-									class="text-sm">(cli)</span>
+									class="text-lg">(cli)</span>
 							</div>
 						</div>
-						<div><i class="fas fa-desktop m-1"></i></div>
+						<div><i class="fas fa-desktop"></i></div>
+						<div class="text-xl">Desktop</div>
 					</div>
 					<div class="fragment flex-auto flex flex-col m-1" data-fragment-index="4">
 						<div class="border-white border-2 border-solid flex rounded-lg justify-evenly flex-auto p-4">
 							<div class="fragment flex flex-col" data-fragment-index="4"><i
-									class="fab fa-apple"></i><span class="text-sm">iOS</span></div>
+									class="fab fa-apple"></i><span class="text-lg">iOS</span></div>
 							<div class="fragment flex flex-col" data-fragment-index="5"><i
-									class="fab fa-android"></i><span class="text-sm">Android</span></div>
+									class="fab fa-android"></i><span class="text-lg">Android</span></div>
 						</div>
-						<div><i class="fas fa-mobile-alt m-1"></i></div>
+						<div><i class="fas fa-mobile-alt"></i></div>
+						<div class="text-xl">Mobile</div>
 
 					</div>
 
 
 				</div>
 			</section>
-			<section>
+			<section style="zoom: .8;">
 				<h2>Synchronisation</h2>
 				<p>Synchronisation des notes avec plusieurs services cloud</p>
-				<svg viewBox="0 0 400 200">
+				<svg viewBox=" 0 0 400 200">
 					<marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4" markerHeight="4"
 						orient="auto-start-reverse">
 						<path d="M 0 0 L 10 5 L 0 10 z" stroke="white" fill="white" />
@@ -260,7 +281,7 @@
 					</g>
 				</svg>
 			</section>
-			<section>
+			<section style="zoom: .7;">
 				<h2>Chiffrement</h2>
 				<p>Chiffrement de bout en bout (E2EE)</p>
 				<svg viewBox="0 0 400 200">
@@ -355,7 +376,7 @@
 					</g>
 				</svg>
 			</section>
-			<section data-autoslide="30000">
+			<section data-autoslide="30000" style="zoom: .9;">
 				<h2>Des tonnes de fonctionnalités à explorer</h2>
 				<ul>
 					<li class="fragment" data-autoslide="600">CSS personnalisé</li>
@@ -438,7 +459,7 @@ graph LR
 					</div>
 				</div>
 			</section>
-			<section data-auto-animate class="diagram-slide">
+			<section data-auto-animate class="diagram-slide" style="zoom: .8;">
 				<h2>Qu'est-ce que <strong>MermaidJS</strong> ?</h2>
 				<div class="flex" style="min-height: 70vh">
 					<div class=" diagram-display flex-auto flex items-center justify-center" data-markdown>
