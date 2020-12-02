@@ -47,6 +47,9 @@
 						<p>Track 2</p>
 					</div>
 				</div>
+				<aside class="notes">
+					Bonjour :)
+				</aside>
 			</section>
 			<section>
 				<h2>Pourquoi <strong>prendre des notes</strong>&nbsp;?</h2>
@@ -64,17 +67,23 @@
 					<li class="fragment">Notes de réunion / entretien</li>
 					<li class="fragment">Journal de travail</li>
 				</ul>
+				<aside class="notes">
+					Détails techniques => ce qui est difficile à retenir<br />
+					Schémas : permet d'expliquer et de structurer sa pensée<br />
+					Journée compliqué => journa de travail avec Horodatage
+				</aside>
 			</section>
 			<section class="p-16" style="zoom: .9;">
 				<h2>Papier ou électronique ?</h2>
+				<aside class="notes">==> Quel outillage pour prendre des notes ?</aside>
 				<div class="flex justify-between">
 					<div>
 						<h3>Papier</h3>
 						<ul>
 							<div class="fragment flex"><span class="w-16">🖊️</span> Intuitif</div>
 							<div class="fragment flex"><span class="w-16">🔋</span> Pas de batterie</div>
-							<div class="fragment flex"><span class="w-16">🎨</span> Dessins / Schémas</div>
-							<div class="fragment flex"><span class="w-16">📊</span> MindMap </div>
+							<div class="fragment flex"><span class="w-16">🎨</span> Dessins</div>
+							<div class="fragment flex"><span class="w-16">📊</span> Schémas / MindMap </div>
 							<div class="fragment flex"><span class="w-16">🔒</span> Facilement sécurisable </div>
 						</ul>
 					</div>
@@ -139,12 +148,16 @@
 					<p class="fragment"><em>Difficile d'avoir une vue d'ensemble.</em></p>
 				</div>
 				<aside class="notes">
-					OneNote (2003, 2007, 2010, 2013, 2016, 2020), open format
-					EverNote lancé en 2000, sur mobile d'abord, web en 2008-2011
-					Google Keep (2013)
-					SimpleNote => Interface épurée
-					Laverna => JS only
-					Turtl => Ressemble à Keep (vue matricielle)
+					Top 3 propriétaire<br />
+					OneNote (2003, 2007, 2010, 2013, 2016, 2020), open format<br />
+					EverNote lancé en 2000, sur mobile d'abord, web en 2008-2011<br />
+					Google Keep (2013)<br />
+					<br />
+					Côté open-source, différentes sites qui listent des alternatives, rarement les mêmes.<br />
+					Quelques exemples trouvés en préparant ce talk.<br />
+					SimpleNote => Interface épurée<br />
+					Laverna => JS only<br />
+					Turtl => Notebook collaboratif, Ressemble à Keep (vue matricielle)
 				</aside>
 			</section>
 			<section data-auto-animate style="zoom: 90%;">
@@ -200,6 +213,47 @@
 					<img data-id="editor" src="joplin_main.png"
 						style="object-fit: cover; width: 623px !important; height: 500px; object-position: 100% 0;" />
 
+				</div>
+			</section>
+			<section style="zoom: .7;">
+				<h2>Markdown</h2>
+				<div class="flex items-stretch justify-evenly">
+					<div style="width: 50%; height: 100%;">
+						<pre>
+							<code>
+# Titre 1
+## Titre 2
+### Titre 3
+
+*Emphase*, i.e. _italique_.
+**Forte emphase**, i.e. __gras__.
+**Emphase __combinée**.
+~~Barré~~
+
+1. Liste ordonnée
+2. Second élément
+
+* Puce 1
+* Puce 2
+							</code>
+						</pre>
+					</div>
+					<div style="width: 50%;" data-markdown>
+						# Titre 1
+						## Titre 2
+						### Titre 3
+
+						*Emphase*, i.e. _italique_.
+						**Forte emphase**, i.e. __gras__.
+						**Emphase __combinée**.
+						~~Barré~~
+
+						1. Liste ordonnée
+						2. Second élément
+
+						* Puce 1
+						* Puce 2
+					</div>
 				</div>
 			</section>
 			<section data-auto-animate>
@@ -269,7 +323,7 @@
 							marker-end="url(#arrow)" />
 					</g>
 					<g class="fragment">
-						<text x="60" y="170" class="text-sm" fill="white">WebDAV</text>
+						<text x="70" y="170" class="text-sm" fill="white">AWS S3</text>
 						<line x1="120" y1="155" x2="180" y2="120" stroke="white" marker-start="url(#arrow)"
 							marker-end="url(#arrow)" marker-start="url(#arrow)" marker-end="url(#arrow)" />
 					</g>
@@ -280,7 +334,7 @@
 
 					</g>
 					<g class="fragment">
-						<text x="270" y="170" class="text-sm" fill="white">AWS S3</text>
+						<text x="280" y="170" class="text-sm" fill="white">WebDAV</text>
 						<line x1="280" y1="155" x2="220" y2="120" stroke="white" marker-start="url(#arrow)"
 							marker-end="url(#arrow)" />
 					</g>
@@ -300,83 +354,94 @@
 					</marker>
 					<g>
 						<text x="182" y="102" class="text-sm" fill="white">Cloud</text>
-						<text class="fragment text-sm" data-fragment-index="2" x="220" y="102" fill="white">🔒</text>
+						<text class="fragment text-xs" data-fragment-index="12" x="220" y="102" fill="white">🔑🔒</text>
 					</g>
-					<g>
+					<g class="fragment" data-fragment-index="10">
 						<g transform="translate(95,10)">
 							<image xlink:href="./joplin.svg" x="0" y="0" heigh="20" width="20" />
 							<text x="25" y="15" class="text-sm" fill="white"
 								style="font-family: 'Font Awesome 5 Brands'">&#xf17a;</text>
-							<text class="fragment text-sm" data-fragment-index="3" x="40" y="15" fill="white">🔒</text>
-							<text class="fragment text-sm" data-fragment-index="4" x="40" y="15" fill="white">🔓</text>
+							<text class="fragment text-xs" data-fragment-index="13" x="40" y="15"
+								fill="white">🔑🔒</text>
+							<text class="fragment text-xs" data-fragment-index="14" x="40" y="15"
+								fill="white">🔑🔓</text>
 						</g>
 						<line x1="120" y1="35" x2="180" y2="80" stroke="white" marker-start="url(#arrow)"
 							marker-end="url(#arrow)" />
-						<line class="fragment" data-fragment-index="3" x1="120" y1="35" x2="180" y2="80" stroke="yellow"
-							marker-start="url(#yellow-arrow)" marker-end="url(#yellow-arrow)" />
+						<line class="fragment" data-fragment-index="13" x1="120" y1="35" x2="180" y2="80"
+							stroke="yellow" marker-start="url(#yellow-arrow)" marker-end="url(#yellow-arrow)" />
 					</g>
 					<g>
 						<g transform="translate(180,10)">
 							<image xlink:href="./joplin.svg" x="0" y="0" heigh="20" width="20" />
 							<text x="25" y="15" class="text-sm" fill="white"
 								style="font-family: 'Font Awesome 5 Brands'">&#xf17c;</text>
-							<text class="fragment text-sm" data-fragment-index="1" x="40" y="15" fill="white">🔓</text>
+							<text class="fragment text-xs" data-fragment-index="11" x="40" y="15"
+								fill="white">🔑🔓</text>
 						</g>
 						<line x1="200" y1="35" x2="200" y2="75" stroke="white" marker-start="url(#arrow)"
 							marker-end="url(#arrow)" />
-						<line class="fragment" data-fragment-index="2" x1="200" y1="35" x2="200" y2="75" stroke="yellow"
-							marker-start="url(#yellow-arrow)" marker-end="url(#yellow-arrow)" />
+						<line class="fragment" data-fragment-index="12" x1="200" y1="35" x2="200" y2="75"
+							stroke="yellow" marker-start="url(#yellow-arrow)" marker-end="url(#yellow-arrow)" />
 					</g>
-					<g>
+					<g class="fragment" data-fragment-index="1">
 						<g transform="translate(260,10)">
 							<image xlink:href="./joplin.svg" x="0" y="0" heigh="20" width="20" />
 							<text x="25" y="15" class="text-sm" fill="white"
 								style="font-family: 'Font Awesome 5 Brands'">&#xf17c;</text>
-							<text class="fragment text-sm" data-fragment-index="3" x="40" y="15" fill="white">🔒</text>
-							<text class="fragment text-sm" data-fragment-index="4" x="40" y="15" fill="white">🔓</text>
+							<text class="fragment text-xs" data-fragment-index="13" x="40" y="15"
+								fill="white">🔑🔒</text>
+							<text class="fragment text-xs" data-fragment-index="15" x="40" y="15"
+								fill="white">🔑🔓</text>
 						</g>
 						<line x1="280" y1="35" x2="220" y2="80" stroke="white" marker-start="url(#arrow)"
 							marker-end="url(#arrow)" />
-						<line class="fragment" data-fragment-index="3" x1="280" y1="35" x2="220" y2="80" stroke="yellow"
-							marker-start="url(#yellow-arrow)" marker-end="url(#yellow-arrow)" />
+						<line class="fragment" data-fragment-index="13" x1="280" y1="35" x2="220" y2="80"
+							stroke="yellow" marker-start="url(#yellow-arrow)" marker-end="url(#yellow-arrow)" />
 					</g>
-					<g>
+					<g class="fragment" data-fragment-index="4">
 						<g transform="translate(95,160)">
 							<image xlink:href="./joplin.svg" x="0" y="0" heigh="20" width="20" />
 							<text x="25" y="15" class="text-sm" fill="white"
 								style="font-family: 'Font Awesome 5 Brands'">&#xf3d4;</text>
-							<text class="fragment text-sm" data-fragment-index="3" x="40" y="15" fill="white">🔒</text>
-							<text class="fragment text-sm" data-fragment-index="4" x="40" y="15" fill="white">🔓</text>
+							<text class="fragment text-xs" data-fragment-index="13" x="40" y="15"
+								fill="white">🔑🔒</text>
+							<text class="fragment text-xs" data-fragment-index="16" x="40" y="15"
+								fill="white">🔑🔓</text>
 						</g>
 						<line x1="120" y1="155" x2="180" y2="120" stroke="white" marker-start="url(#arrow)"
 							marker-end="url(#arrow)" marker-start="url(#arrow)" marker-end="url(#arrow)" />
-						<line class="fragment" data-fragment-index="3" x1="120" y1="155" x2="180" y2="120"
+						<line class="fragment" data-fragment-index="13" x1="120" y1="155" x2="180" y2="120"
 							stroke="yellow" marker-start="url(#yellow-arrow)" marker-end="url(#yellow-arrow)" />
 					</g>
-					<g>
+					<!-- <g class="fragment" data-fragment-index="2">
 						<g transform="translate(180,160)">
 							<image xlink:href="./joplin.svg" x="0" y="0" heigh="20" width="20" />
 							<text x="25" y="15" class="text-sm" fill="white"
 								style="font-family: 'Font Awesome 5 Brands'">&#xf179;</text>
-							<text class="fragment text-sm" data-fragment-index="3" x="40" y="15" fill="white">🔒</text>
-							<text class="fragment text-sm" data-fragment-index="4" x="40" y="15" fill="white">🔓</text>
+							<text class="fragment text-xs" data-fragment-index="13" x="40" y="15"
+								fill="white">🔑🔒</text>
+							<text class="fragment text-xs" data-fragment-index="18" x="40" y="15"
+								fill="white">🔑🔓</text>
 						</g>
 						<line x1="200" y1="155" x2="200" y2="125" stroke="white" marker-start="url(#arrow)"
 							marker-end="url(#arrow)" />
-						<line class="fragment" data-fragment-index="3" x1="200" y1="155" x2="200" y2="125"
+						<line class="fragment" data-fragment-index="13" x1="200" y1="155" x2="200" y2="125"
 							stroke="yellow" marker-start="url(#yellow-arrow)" marker-end="url(#yellow-arrow)" />
-					</g>
-					<g>
+					</g> -->
+					<g class="fragment" data-fragment-index="3">
 						<g transform="translate(260,160)">
 							<image xlink:href="./joplin.svg" x="0" y="0" heigh="20" width="20" />
 							<text x="25" y="15" class="text-sm" fill="white"
 								style="font-family: 'Font Awesome 5 Brands'">&#xf17b;</text>
-							<text class="fragment text-sm" data-fragment-index="3" x="40" y="15" fill="white">🔒</text>
-							<text class="fragment text-sm" data-fragment-index="4" x="40" y="15" fill="white">🔓</text>
+							<text class="fragment text-xs" data-fragment-index="13" x="40" y="15"
+								fill="white">🔑🔒</text>
+							<text class="fragment text-xs" data-fragment-index="17" x="40" y="15"
+								fill="white">🔑🔓</text>
 						</g>
 						<line x1="280" y1="155" x2="220" y2="120" stroke="white" marker-start="url(#arrow)"
 							marker-end="url(#arrow)" />
-						<line class="fragment" data-fragment-index="3" x1="280" y1="155" x2="220" y2="120"
+						<line class="fragment" data-fragment-index="13" x1="280" y1="155" x2="220" y2="120"
 							stroke="yellow" marker-start="url(#yellow-arrow)" marker-end="url(#yellow-arrow)" />
 					</g>
 				</svg>
@@ -439,6 +504,10 @@ graph LR
 						</pre>
 					</div>
 				</div>
+				<aside class="notes">
+					Différentes formes (carré, cercle, losange)
+					Liens avec texte
+				</aside>
 			</section>
 			<section data-auto-animate class="diagram-slide">
 				<h2>Qu'est-ce que <strong>MermaidJS</strong> ?</h2>
@@ -463,6 +532,10 @@ graph LR
 						</pre>
 					</div>
 				</div>
+				<aside class="notes">
+					D'autre formes de diagramme :<br />
+					diagramme de séquence
+				</aside>
 			</section>
 			<section data-auto-animate class="diagram-slide" style="zoom: .8;">
 				<h2>Qu'est-ce que <strong>MermaidJS</strong> ?</h2>
@@ -557,19 +630,39 @@ sequenceDiagram
 						</pre>
 					</div>
 				</div>
+				<aside class="notes">
+					Diagramme de classe<br />
+					Gantt<br />
+					Camemberts<br />
+					<br />
+					Chaque diagramme a sa propre syntaxe
+				</aside>
 			</section>
 			<section>
-				<h1> <b>Live</b> Démo</h1>
+				<h1> Démo </h1>
+				<aside class="notes">
+					<p>Tour rapide de l'outil</p>
+					<p>Mode WYSIWYG</p>
+					<p>Barre d'outils</p>
+					<p>Copie d'image</p>
+					<p>Markdown classique</p>
+					<p>Graph LR</p>
+					<p>erDiagram</p>
+					<p>sequenceDiagram</p>
+					<p>...</p>
+					<p>tableau</p>
+					<p>liste des plugins</p>
+				</aside>
 			</section>
 			<section class="p-8">
+				<h3>Retour d'expérience après 6+ mois</h3>
 				<div class="flex">
 					<div class="flex-1">
 						<h2>😀 Les Plus</h2>
 						<ul>
-							<li class=" fragment">Open-source</li>
-							<li class="fragment">Synchronisation multi-device</li>
-							<li class="fragment">Chiffrement</li>
-							<li class="fragment">Multi-plateforme (Windows, macOS, Linux, Mobile, npm)</li>
+							<li class=" fragment">Open-source / multi-plateforme</li>
+							<li class="fragment">Synchronisation &amp; chiffrement</li>
+							<li class="fragment">Schémas intégrés</li>
 						</ul>
 					</div>
 					<div class="border-r-2 m-2 border-white border-solid"></div>
@@ -578,10 +671,19 @@ sequenceDiagram
 						<ul>
 							<li class="fragment">Pas de synchronisation Google Drive</li>
 							<li class="fragment">Pas d'autocomplétion sur les plugins</li>
-							<li class="fragment">Pas de workspaces</li>
+							<li class="fragment">Pas de workspaces (pro/perso)</li>
 						</ul>
 					</div>
 				</div>
+				<aside class="notes">
+
+					6 mois d'expérience avec Joplin et Mermaid<br />
+					<br />
+					Open-source : testé sous linux avant client windows<br />
+					Chiffrement simple à mettre en place, et s'oublie facilement.<br />
+					Plugins schémas (mermaid) : sert à faire des schémas d'archi en réunion sans avoir d'outillage
+					complexe.
+				</aside>
 			</section>
 			<section>
 				<h1>Questions ?</h1>
