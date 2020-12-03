@@ -716,7 +716,7 @@ sequenceDiagram
 				<h1>Questions ?</h1>
 			</section>
 			<section>
-				<h2>Merci</h2>
+				<h2 style="text-transform: none;">Merci</h2>
 				<div style="display:flex; flex-direction: row; align-content: space-between; align-items: center;">
 					<div
 						style="display:flex; flex-direction: column; align-content: flex-start; align-items: center; flex:1;">
@@ -725,18 +725,34 @@ sequenceDiagram
 						<p class="text-2xl"><i class="fab fa-github"></i>philippetony</p>
 						<p class="text-2xl">Developer &amp; more <br />@ Zenika Nantes</p>
 					</div>
-					<div style="display:flex; flex-direction: column; align-items: center; flex:1;">
+					<div style="display:flex; flex-direction: column; align-items: center; flex:1; font-size: 50%;">
+						<p>Joplin</p>
+						<div class="bg-white" style="flex:auto; padding: 0.3em;">
+							<span id="qrcode-app" class="no-border"></span>
+						</div>
+						<p style="font-size: 80%;">https://joplinapp.org/</p>
+						<!-- <div style="border-bottom: 3px solid #333; align-self: stretch; margin: 1em;"></div> -->
 						<p>
 							Slides :
 						</p>
-						<div class="bg-white" style="flex:0; padding: 0.3em;">
+						<div class="bg-white" style="flex:auto; padding: 0.3em;">
 							<span id="qrcode" class="no-border"></span>
 						</div>
+						<p style="font-size: 80%;">https://github.com/philippetony/prise-de-notes-joplin-mermaid</p>
 						<script>
 							new QRCode(document.getElementById("qrcode"), {
 								colorLight: '#fff',
 								colorDark: '#191919',
+								height: 128,
+								width: 128,
 								text: "https://github.com/philippetony/prise-de-notes-joplin-mermaid"
+							});
+							new QRCode(document.getElementById("qrcode-app"), {
+								colorLight: '#fff',
+								colorDark: '#191919',
+								height: 128,
+								width: 128,
+								text: "https://joplinapp.org/"
 							});
 						</script>
 					</div>
